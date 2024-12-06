@@ -15,7 +15,7 @@ export default function TypeSlider({ value, onValueChange, disabled }) {
         maximumValue={100}
         minimumTrackTintColor="transparent"
         maximumTrackTintColor="transparent"
-        thumbImage={require("../../../../../assets/images/slider.png")}
+        thumbTintColor="#C9CDFF"
         style={{ position: "absolute", width: "85%" }}
       />
     </Container>
@@ -30,7 +30,7 @@ const Container = styled.View`
 
 const GradientLiner = styled(LinearGradient)`
   width: 85%;
-  height: 16px;
+  height: 10px;
   border-radius: 10px;
   justify-content: center;
   margin-top: 16px;

@@ -25,7 +25,7 @@ export default function FourthContainer() {
   return (
     <Layout>
       <BackButton />
-      <Header step="4" title={question.title} />
+      <Header step="4" title={question.title} num={num} />
       <Container>
         {question.answers.map((answer, index) => (
           <SelectButton

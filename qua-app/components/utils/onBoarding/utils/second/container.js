@@ -49,12 +49,13 @@ const Container = styled.View`
 const Title = styled.Text`
   color: "#818182";
   font-size: 14px;
-  margin: 16px 0 5px;
+  margin: 8px 0;
 `;
 
 const SelectContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 16px;
 `;
 
 const InputContainer = styled.View`

@@ -68,7 +68,7 @@ const TextContainer = styled.View`
   width: 85%;
   flex-direction: row;
   justify-content: space-between;
-  margin: 8px 0 12px;
+  margin-bottom: 22px;
 `;
 
 const TypeText = styled.Text`

@@ -28,9 +28,14 @@ export const userStore = create((set) => ({
       const updated = update(state.detailTypes || []);
       return { detailTypes: Array.isArray(updated) ? updated : [] };
     }),
+
   answers: [null, null, null, null, null, null],
   setAnswers: (state) => set(() => ({ answers: state })),
 
   interests: [],
-  setInterests: (state) => set(() => ({ interests: state })),
+  setInterests: (update) =>
+    set((state) => {
+      const updated = update(state.interests || []);
+      return { interests: Array.isArray(updated) ? updated : [] };
+    }),
 }));
