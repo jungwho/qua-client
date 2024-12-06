@@ -1,18 +1,20 @@
 import styled from "@emotion/native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Footer({ text, isActive, next }) {
+export default function NextButton({ text, isActive, path, num = 0 }) {
   const navigation = useNavigation();
+
+  const onPressNext = () => {
+    if (num) {
+      navigation.navigate(path, { num: num });
+    } else {
+      navigation.navigate(path);
+    }
+  };
 
   return (
     <Container>
-      <Btn
-        isActive={isActive}
-        disabled={!isActive}
-        onPress={() => {
-          navigation.navigate(next);
-        }}
-      >
+      <Btn isActive={isActive} disabled={!isActive} onPress={onPressNext}>
         <Txt isActive={isActive}>{text}</Txt>
       </Btn>
     </Container>
@@ -23,7 +25,6 @@ const Container = styled.View`
   position: absolute;
   width: 100%;
   bottom: 0;
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 56px;
@@ -34,7 +35,6 @@ const Btn = styled.Pressable`
   height: 56px;
   background-color: ${(props) => (props.isActive ? "#5565F2" : "#dbdbdb")};
   border-radius: 28px;
-  display: flex;
   justify-content: center;
   align-items: center;
 `;

@@ -5,11 +5,8 @@ import { LinearGradient } from "expo-linear-gradient";
 
 export default function TypeSlider({ value, onValueChange, disabled }) {
   return (
-    <GradientLiner
-      colors={["#C9CDFF", "#5565F2"]}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 0 }}
-    >
+    <Container>
+      <GradientLiner colors={["#C9CDFF", "#5565F2"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}></GradientLiner>
       <Slider
         value={value}
         onValueChange={onValueChange}
@@ -18,15 +15,22 @@ export default function TypeSlider({ value, onValueChange, disabled }) {
         maximumValue={100}
         minimumTrackTintColor="transparent"
         maximumTrackTintColor="transparent"
-        thumbImage={require("../../../assets/images/slider.png")}
+        thumbImage={require("../../../../../assets/images/slider.png")}
+        style={{ position: "absolute", width: "85%" }}
       />
-    </GradientLiner>
+    </Container>
   );
 }
 
+const Container = styled.View`
+  width: 100%;
+  align-items: center;
+  margin-bottom: 22px;
+`;
+
 const GradientLiner = styled(LinearGradient)`
   width: 85%;
-  height: 8px;
+  height: 16px;
   border-radius: 10px;
   justify-content: center;
   margin-top: 16px;

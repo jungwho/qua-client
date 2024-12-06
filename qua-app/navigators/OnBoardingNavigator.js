@@ -3,8 +3,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import FirstScreen from "../screens/onBoarding/FirstScreen";
 import SecondScreen from "../screens/onBoarding/SecondScreen";
 import ThirdScreen from "../screens/onBoarding/ThirdScreen";
-import FourthScreen from "../screens/onBoarding/fourth/FourthScreen";
-import FifthScreen from "../components/onBoarding/FifthComponent";
+import FourthScreen from "../screens/onBoarding/FourthScreen";
+import FifthScreen from "../screens/onBoarding/FifthScreen";
 
 const OnBoardingStack = createStackNavigator();
 

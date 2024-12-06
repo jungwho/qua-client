@@ -1,5 +1,5 @@
-import FifthComponent from "../../components/onBoarding/FifthComponent";
+import FifthContainer from "../../components/utils/onBoarding/utils/fifth/container";
 
 export default function FifthScreen() {
-  return <FifthComponent />;
+  return <FifthContainer />;
 }

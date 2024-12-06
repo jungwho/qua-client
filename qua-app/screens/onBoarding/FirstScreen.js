@@ -1,5 +1,5 @@
-import FirstComponent from "../../components/onBoarding/FirstComponent";
+import FirstContainer from "../../components/utils/onBoarding/utils/first/container";
 
 export default function FirstScreen() {
-  return <FirstComponent />;
+  return <FirstContainer />;
 }

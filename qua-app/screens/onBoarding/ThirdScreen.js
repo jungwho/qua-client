@@ -1,5 +1,5 @@
-import ThirdComponent from "../../components/onBoarding/ThirdComponent";
+import ThirdContainer from "../../components/utils/onBoarding/utils/third/container";
 
 export default function ThirdScreen() {
-  return <ThirdComponent />;
+  return <ThirdContainer />;
 }

@@ -1,12 +1,12 @@
 import styled from "@emotion/native";
-import { userStore } from "../common/Store";
 
-import Layout from "../common/utils/Layout";
-import BackButton from "../common/utils/BackButton";
-import Header from "./utils/Header";
-import Footer from "./utils/Footer";
+import Layout from "../../commons/ui/layout";
+import BackButton from "../../commons/ui/backButton";
+import Header from "../../commons/ui/header";
+import NextButton from "../../commons/ui/nextButton";
+import { userStore } from "../../commons/store";
 
-export default function FirstComponent() {
+export default function FirstContainer() {
   const { name, setName } = userStore();
 
   return (
@@ -16,7 +16,7 @@ export default function FirstComponent() {
       <Container>
         <Input value={name} onChangeText={setName} />
       </Container>
-      <Footer text="다음" next="second" isActive={!!name.trim()} />
+      <NextButton text="다음" path="second" isActive={!!name.trim()} />
     </Layout>
   );
 }

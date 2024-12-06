@@ -1,9 +1,11 @@
 import styled from "@emotion/native";
 
-export default function SelectButton({ text, isSelected, onPress }) {
+export default function SelectButton({ text, isSelected, onPress, btnStyle, fontSize }) {
   return (
-    <Btn isSelected={isSelected} onPress={onPress}>
-      <Txt isSelected={isSelected}>{text}</Txt>
+    <Btn isSelected={isSelected} onPress={onPress} style={btnStyle}>
+      <Txt isSelected={isSelected} style={{ fontSize: fontSize }}>
+        {text}
+      </Txt>
     </Btn>
   );
 }
