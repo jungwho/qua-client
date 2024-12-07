@@ -19,7 +19,7 @@ export const userStore = create((set) => ({
   birth: "",
   setBirth: (state) => set(() => ({ birth: state })),
 
-  type: 50,
+  type: 4,
   setType: (state) => set(() => ({ type: state })),
 
   detailTypes: [],
