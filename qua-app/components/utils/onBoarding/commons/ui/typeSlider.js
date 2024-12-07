@@ -15,7 +15,7 @@ export default function TypeSlider({ value, onValueChange, disabled }) {
         maximumValue={100}
         minimumTrackTintColor="transparent"
         maximumTrackTintColor="transparent"
-        thumbTintColor="#C9CDFF"
+        thumbImage={require("../../../../../assets/images/slider.png")}
         style={{ position: "absolute", width: "85%" }}
       />
     </Container>

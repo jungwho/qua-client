@@ -1,5 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 
+import StartScreen from "../screens/onBoarding/StartScreen";
 import FirstScreen from "../screens/onBoarding/FirstScreen";
 import SecondScreen from "../screens/onBoarding/SecondScreen";
 import ThirdScreen from "../screens/onBoarding/ThirdScreen";
@@ -16,6 +17,7 @@ export default function OnBoardingNavigator() {
         headerShown: false,
       }}
     >
+      <OnBoardingStack.Screen name="start" component={StartScreen} />
       <OnBoardingStack.Screen name="first" component={FirstScreen} />
       <OnBoardingStack.Screen name="second" component={SecondScreen} />
       <OnBoardingStack.Screen name="third" component={ThirdScreen} />
