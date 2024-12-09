@@ -7,6 +7,7 @@ import ThirdScreen from "../screens/onBoarding/ThirdScreen";
 import FourthScreen from "../screens/onBoarding/FourthScreen";
 import FifthScreen from "../screens/onBoarding/FifthScreen";
 import MainScreen from "../screens/MainScreen";
+import ResultScreen from "../screens/onBoarding/ResultScreen";
 
 const OnBoardingStack = createStackNavigator();
 
@@ -23,6 +24,7 @@ export default function OnBoardingNavigator() {
       <OnBoardingStack.Screen name="third" component={ThirdScreen} />
       <OnBoardingStack.Screen name="fourth" component={FourthScreen} />
       <OnBoardingStack.Screen name="fifth" component={FifthScreen} />
+      <OnBoardingStack.Screen name="result" component={ResultScreen} />
       <OnBoardingStack.Screen name="main" component={MainScreen} />
     </OnBoardingStack.Navigator>
   );

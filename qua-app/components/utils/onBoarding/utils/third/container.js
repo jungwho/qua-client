@@ -25,7 +25,7 @@ export default function ThirdContainer() {
       <BackButton />
       <Header step="3" title="어떤 피부 타입인가요?" />
       <Container>
-        <TypeSlider value={type} onValueChange={setType} />
+        <TypeSlider value={type} onValueChange={setType} isResult={false} />
         <TextContainer>
           <TypeText>건성</TypeText>
           <TypeText>지성</TypeText>

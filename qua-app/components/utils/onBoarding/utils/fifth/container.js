@@ -64,7 +64,7 @@ export default function FifthContainer() {
           ))}
         </SelectContainer>
       </Container>
-      <NextButton text="다음" path="main" num={1} isActive={!!interests.length} />
+      <NextButton text="다음" path="result" num={1} isActive={!!interests.length} />
     </Layout>
   );
 }

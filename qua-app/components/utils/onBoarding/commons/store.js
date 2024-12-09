@@ -38,4 +38,10 @@ export const userStore = create((set) => ({
       const updated = update(state.interests || []);
       return { interests: Array.isArray(updated) ? updated : [] };
     }),
+
+  results: [],
+  setResults: (state) => set(() => ({ results: state })),
+
+  scores: [],
+  setScores: (state) => set(() => ({ scores: state })),
 }));
