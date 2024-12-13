@@ -1,7 +1,7 @@
 import styled from "@emotion/native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function NextButton({ text, isActive, path, num = 0 }) {
+export default function NextButton({ text, isActive, path, num = 0, isResult = false }) {
   const navigation = useNavigation();
 
   const onPressNext = () => {
@@ -17,6 +17,11 @@ export default function NextButton({ text, isActive, path, num = 0 }) {
       <Btn isActive={isActive} disabled={!isActive} onPress={onPressNext}>
         <Txt isActive={isActive}>{text}</Txt>
       </Btn>
+      {isResult && (
+        <PassBtn onPress={() => navigation.navigate("main")}>
+          <PassTxt>건너뛰기</PassTxt>
+        </PassBtn>
+      )}
     </Container>
   );
 }
@@ -42,4 +47,12 @@ const Btn = styled.Pressable`
 const Txt = styled.Text`
   color: ${(props) => (props.isActive ? "#FFFFFF" : "#aaaaab")};
   font-size: 16px;
+`;
+
+const PassBtn = styled.Pressable``;
+
+const PassTxt = styled.Text`
+  color: #c2c2c3;
+  font-size: 16px;
+  margin-top: 15px;
 `;

@@ -1,7 +1,7 @@
 import styled from "@emotion/native";
 
-import Layout from "../../commons/ui/layout";
-import BackButton from "../../commons/ui/backButton";
+import Layout from "../../../../common/ui/layout";
+import BackButton from "../../../../common/ui/backButton";
 import Header from "../../commons/ui/header";
 import NextButton from "../../commons/ui/nextButton";
 import { userStore } from "../../commons/store";

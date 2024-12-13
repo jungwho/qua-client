@@ -1,9 +1,9 @@
 import styled from "@emotion/native";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { userStore } from "../../commons/store";
 
-import Layout from "../../commons/ui/layout";
-import BackButton from "../../commons/ui/backButton";
+import Layout from "../../../../common/ui/layout";
+import BackButton from "../../../../common/ui/backButton";
 import Header from "../../commons/ui/header";
 import SelectButton from "../../commons/ui/selectButton";
 import NextButton from "../../commons/ui/nextButton";

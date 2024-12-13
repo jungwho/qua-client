@@ -1,7 +1,7 @@
 import styled from "@emotion/native";
 
-import Layout from "../../commons/ui/layout";
-import BackButton from "../../commons/ui/backButton";
+import Layout from "../../../../common/ui/layout";
+import BackButton from "../../../../common/ui/backButton";
 
 import { userStore } from "../../commons/store";
 import TypeSlider from "../../commons/ui/typeSlider";
@@ -11,8 +11,6 @@ import NextButton from "../../commons/ui/nextButton";
 export default function ResultContainer() {
   const { name, answers } = userStore();
   const data = ResultCalculator(answers);
-  console.log(data?.results);
-  console.log(data?.scores);
 
   return (
     <Layout>
@@ -42,7 +40,7 @@ export default function ResultContainer() {
         </TextContainer>
         <TextContainer>
           <Description>수분 부족</Description>
-          <Description>수분 충전</Description>
+          <Description>수분 충분</Description>
         </TextContainer>
         <TypeSlider value={data?.scores[2]} />
         <TextContainer>
@@ -55,7 +53,7 @@ export default function ResultContainer() {
         </TextContainer>
       </Container>
 
-      <NextButton text="적합도 분석 리포트 보기" isActive={true} />
+      <NextButton text="적합도 분석 리포트 보기" isActive={true} isResult={true} />
     </Layout>
   );
 }
