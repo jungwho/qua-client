@@ -1,5 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "../screens/home/HomeScreen";
+import BoardScreen from "../screens/home/BoardScreen";
+import ItemScreen from "../screens/home/ItemScreen";
 
 const HomeStack = createStackNavigator();
 
@@ -8,9 +9,11 @@ export default function HomeNavigator() {
     <HomeStack.Navigator
       screenOptions={{
         headerShown: false,
+        cardStyleInterpolator: () => ({}),
       }}
     >
-      <HomeStack.Screen name="home" component={HomeScreen} />
+      <HomeStack.Screen name="board" component={BoardScreen} />
+      <HomeStack.Screen name="item" component={ItemScreen} />
     </HomeStack.Navigator>
   );
 }

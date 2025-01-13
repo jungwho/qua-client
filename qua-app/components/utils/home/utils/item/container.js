@@ -3,10 +3,10 @@ import styled from "@emotion/native";
 import Layout from "../../../../common/ui/layout";
 import Header from "../../commons/ui/header";
 
-export default function HomeContainer() {
+export default function ItemContainer() {
   return (
     <Layout>
-      <Header text="수정" path="edit" />
+      <Header isBoard={false} />
     </Layout>
   );
 }

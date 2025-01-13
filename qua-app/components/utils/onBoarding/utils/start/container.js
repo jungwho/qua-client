@@ -1,6 +1,7 @@
 import styled from "@emotion/native";
 
 import Layout from "../../../../common/ui/layout";
+import NextButton from "../../commons/ui/nextButton";
 
 export default function StartContainer() {
   return (

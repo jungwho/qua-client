@@ -1,8 +1,11 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialIcons } from "@expo/vector-icons";
+import Feather from "@expo/vector-icons/Feather";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 import HomeNavigator from "../navigators/HomeNavigator";
-import SearchNavigator from "../navigators/SearchNavigator";
+import RecommendNavigator from "../navigators/RecommendNavigator";
 import ShowNavigator from "../navigators/ShowNavigator";
 import MyPageNavigator from "../navigators/MyPageNavigator";
 
@@ -12,39 +15,15 @@ export default function MainScreen() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, size }) => {
+        tabBarIcon: ({ focused }) => {
           if (route.name === "tab1") {
-            return (
-              <MaterialIcons
-                name={"feed"}
-                size={size}
-                color={focused ? "#5565F2" : "gray"}
-              />
-            );
+            return <Feather name="home" size={23} color={focused ? "#5565F2" : "#DBDBDB"} />;
           } else if (route.name === "tab2") {
-            return (
-              <MaterialIcons
-                name={"feed"}
-                size={size}
-                color={focused ? "#5565F2" : "gray"}
-              />
-            );
+            return <MaterialCommunityIcons name="medal-outline" size={24} color={focused ? "#5565F2" : "#DBDBDB"} />;
           } else if (route.name === "tab3") {
-            return (
-              <MaterialIcons
-                name={"feed"}
-                size={size}
-                color={focused ? "#5565F2" : "gray"}
-              />
-            );
+            return <MaterialIcons name="explore" size={24} color={focused ? "#5565F2" : "#DBDBDB"} />;
           } else if (route.name === "tab4") {
-            return (
-              <MaterialIcons
-                name={"feed"}
-                size={size}
-                color={focused ? "#5565F2" : "gray"}
-              />
-            );
+            return <Ionicons name="person-outline" size={24} color={focused ? "#5565F2" : "#DBDBDB"} />;
           }
         },
         headerShown: false,
@@ -54,15 +33,15 @@ export default function MainScreen() {
         name="tab1"
         component={HomeNavigator}
         options={{
-          tabBarLabel: "Home",
+          tabBarLabel: "홈",
           tabBarActiveTintColor: "#5565F2",
         }}
       />
       <Tab.Screen
         name="tab2"
-        component={SearchNavigator}
+        component={RecommendNavigator}
         options={{
-          tabBarLabel: "Search",
+          tabBarLabel: "추천",
           tabBarActiveTintColor: "#5565F2",
         }}
       />
@@ -70,7 +49,7 @@ export default function MainScreen() {
         name="tab3"
         component={ShowNavigator}
         options={{
-          tabBarLabel: "Showroom",
+          tabBarLabel: "둘러보기",
           tabBarActiveTintColor: "#5565F2",
         }}
       />
@@ -78,7 +57,7 @@ export default function MainScreen() {
         name="tab4"
         component={MyPageNavigator}
         options={{
-          tabBarLabel: "My Page",
+          tabBarLabel: "마이페이지",
           tabBarActiveTintColor: "#5565F2",
         }}
       />
